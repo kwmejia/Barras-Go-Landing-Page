@@ -1,0 +1,12 @@
+.banner-about {
+  height: 60vh;
+  padding-top: 180px;
+  background-image: url("https://static.wixstatic.com/media/9c608a_b8f8fb712b3940beb88d51fd5ea5e6d1~mv2_d_3024_2005_s_2.jpg/v1/fill/w_1098,h_650,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/9c608a_b8f8fb712b3940beb88d51fd5ea5e6d1~mv2_d_3024_2005_s_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.about-seccion {
+  background: #F4EBE2;
+}

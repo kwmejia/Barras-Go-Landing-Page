@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap');
+
+:root {
+  --black: #000000;
+  --pink: #F4D5CE;
+  --black-opacity: #222222;
+  --white: #FFFFFF;
+  --rosaClaro: #F4EBE2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+/* Globals */
+.d-middle {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Header */
+
+.head {
+  position: fixed;
+  z-index: 999;
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  transition: .3s all;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: var(--black-opacity);
+}
+
+.cont-header {
+  height: 100px;
+  color: var(--black);
+  font-weight: normal;
+  background: var(--white);
+}
+
+.cont-header a {
+  text-decoration: none;
+  color: var(--black);
+  transition: .3s all;
+}
+
+.cont-header a:hover {
+  color: var(--pink);
+}
+
+
+/* Carousel */
+
+.cont-item {
+  background: var(--black);
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-item p {
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+
+
+/* Banner */
+
+.banner {
+  background: var(--rosaClaro);
+  height: 60vh;
+  padding-top: 140px;
+  overflow: hidden;
+}
+
+.banner .img-banner {
+  height: 45vh;
+  animation: animationBanner 5s linear infinite;
+}
+
+.banner .description {
+  width: 60%;
+  height: min-content;
+  animation: entrance .5s linear;
+}
+
+.banner .title-banner {
+  font-size: 40px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.banner .title-banner::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  background: var(--black);
+  bottom: -10px;
+  left: 0;
+  animation: line 8s linear infinite;
+}
+
+.banner .btn-shop {
+  text-decoration: none;
+  border: 1px solid var(--black);
+  padding: 10px;
+  color: var(--black);
+  align-self: self-start;
+  margin-left: 20%;
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.banner .btn-shop:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* products */
+.products {
+  display: flex;
+}
+
+.products .product {
+  text-align: center;
+}
+
+/* Boletin */
+
+.boletin-container {
+  padding: 40px;
+  background: var(--rosaClaro);
+  position: relative;
+}
+
+.boletin-container p:nth-child(1) {
+  font-weight: 400;
+  font-size: 24px;
+  z-index: 2;
+}
+
+.boletin-container p:nth-child(2) {
+  font-weight: 600;
+  font-size: 32px;
+  z-index: 2;
+}
+
+.boletin-container .icon-des {
+  position: absolute;
+  z-index: 1;
+}
+
+.boletin-container .icon-des.two {
+  right: 30%;
+}
+
+.boletin-container .icon-des.one {
+  left: 30%;
+}
+
+
+footer {
+  padding: 20px;
+  background: var(--black);
+}
+
+footer p {
+  color: var(--white);
+}
+
+footer p:nth-child(1) {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+footer p:nth-child(2) {
+  font-size: 12px;
+
+}
+
+/* Animations */
+
+@keyframes animationBanner {
+  0% {
+    transform: scale(.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(.9);
+  }
+}
+
+@keyframes entrance {
+  0% {
+    transform: translateX(-300px);
+    opacity: .5;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+
+  }
+
+  100% {
+    width: 0%;
+  }
+}
