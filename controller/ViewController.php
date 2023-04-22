@@ -14,6 +14,9 @@ class ViewController {
         case 'map':
           include "./view/map.php";
           break;
+        case 'register':
+          include "./view/register.php";
+          break;
         default:
         include "./view/home.php";
           break;

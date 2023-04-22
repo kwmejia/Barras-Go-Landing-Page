@@ -8,6 +8,7 @@
       <a href="?view=home">INICIO</a>
       <a href="?view=about">ACERDA DE</a>
       <a href="?view=map">DONDE COMPRAR</a>
+      <a href="?view=register">REGISTRO</a>
     </nav>
   </header>
 

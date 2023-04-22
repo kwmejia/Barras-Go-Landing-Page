@@ -97,7 +97,7 @@ p {
 
 .banner {
   background: var(--rosaClaro);
-  height: 60vh;
+  height: 80vh;
   padding-top: 140px;
   overflow: hidden;
 }
