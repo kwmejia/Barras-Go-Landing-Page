@@ -2,18 +2,24 @@
 require_once "model/Conexion.php";
 require_once "model/FormModel.php";
 
-class FormController {
+class FormController
+{
 
-  static public function  formRegister() {
-    $name = $_POST['name'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
-    $fecha_nac = $_POST['fecha_nac'];
-    $table ="users";
+    public static function formRegister()
+    {
+        $name = $_POST['name'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        $fecha_nac = $_POST['fecha_nac'];
+        $table = "usuario";
 
-    $data = array( "name" =>  $name , "password" =>  $password , "email" => $email, "fecha_nac" =>  $fecha_nac, $table);
-    $response = FormModel::insertUser($table,$data);
+        $db = conectarDB();
 
-    return $response;
-  }
+        var_dump($db);
+        exit;
+        $query = "INSERT INTO $table` (nombre,correo,password,fecha_nacimiento)
+     VALUES ('$name','$email','$password','$fecha_nac')";
+        $resultado = mysqli_query($db, $query);
+        echo $resultado;
+    }
 }

@@ -1,11 +1,39 @@
+<?php
+
+$datos = new basedatos();
+if (isset($_POST) && !empty($_POST)) {
+    $res = $datos->insertar_datos($_POST['name'], $_POST['password'], $_POST['email'], $_POST['fecha_nac']);
+    if ($res == true) {
+
+        //se configura el mensaje en javascript
+
+        echo '<script type="text/javascript">
+
+            alert("Información enviada Correctamente");
+
+            window.location.href="index.php";
+
+            </script>';
+    } else {
+
+        echo '<script type="text/javascript">
+
+            alert("Error: No se pudo enviar la información");
+
+            </script>';
+    }
+} //fin IF principal
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
-<?php include "view/fragments/head.php" ?>
+<?php include "view/fragments/head.php"?>
 
 <body>
 
-  <?php require("view/fragments/header.php") ?>
+  <?php require "view/fragments/header.php"?>
 
 
   <div class="banner-map"></div>
@@ -31,14 +59,9 @@
 
 
       <input class="btn btn-primary mt-3" type="submit" value="Enviar">
-      <?php 
-      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        echo FormController::formRegister();
-      }
-      ?>
     </form>
   </section>
-  <?php require("view/fragments/footer.php") ?>
+  <?php require "view/fragments/footer.php"?>
 </body>
 
 </html>

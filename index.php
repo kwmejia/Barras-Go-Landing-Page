@@ -6,4 +6,3 @@ require_once "model/Conexion.php";
 $controller = new ViewController();
 
 $controller->router();
-Conexion::conectar();
